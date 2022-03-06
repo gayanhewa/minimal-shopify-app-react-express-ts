@@ -7,29 +7,32 @@
   "scripts": {
     "dev:client": "yarn parcel",
     "dev:server": "nodemon",
-    "build:client:production": "yarn parcel build",
+    "build:admin:prod": "yarn parcel build client/admin/index.html --dist-dir ./dist/admin --public-url .",
+    "build:customer:prod": "yarn parcel build client/customer/index.html  --dist-dir ./dist/customer --public-url .",
     "build:server:production": "yarn tsc"
   },
-  "targets": {
-    "admin-app": {
-      "source": "client/admin-app/index.html",
-      "distDir": "./dist/admin-app"
-    },
-    "customer-app": {
-      "source": "client/customer-app/index.html",
-      "distDir": "./dist/customer-app"
-    }
-  },
   "devDependencies": {
+    "@apollo/client": "^3.5.10",
+    "@shopify/app-bridge": "^2.0.14",
+    "@shopify/app-bridge-react": "^2.0.14",
+    "@shopify/app-bridge-utils": "^2.0.14",
+    "@shopify/polaris": "^9.0.0",
+    "@shopify/shopify-api": "^2.1.0",
+    "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.21",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.13",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "graphql": "^16.3.0",
     "nodemon": "^2.0.15",
     "parcel": "^2.3.2",
+    "process": "^0.11.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "ts-node": "^10.6.0",

@@ -1,31 +1,23 @@
-# Minimal Starter Boilerplate Express + React
+# Shopify App Boilerplate
 
-This boilerplate is an entry point to anything you want to build. A few assumptions have been made:
+The boilerplate is based on https://github.com/gayanhewa/minimal-react-express-ts-boilerplate
 
-1. You want to have both client and server code in the same repository
-2. You want Typescript for both client and server
-3. You don't want any packages backed into to deal with Testing , Databases, Caching etc
+## Why ?
 
-### What is included in the repo
+I wanted a minimal starter template in TypeScript and based on React + Express. Shopify's sample app generator generates a NextJS javascript app. And requires some effort convert.
+Also they are in the process of moving away from the current app and porting it over to React + Express.
 
-1. Express
-2. React
-3. Parcel for bundling and hot reloads
-4. ts-node and nodemon for running express with file change watching
+## Shopify Node API Library
 
-### How to use this repo
+[]This library](https://github.com/Shopify/shopify-node-api) is well documented, has everything we need to implement the oAuth flow etc.
 
-`degit gayanhewa/minimal-express-react-ts-starter`
+## Notes
+If you are not using App Bridge you can strip out the client/admin app and `auth/toplevel` routes and server/views and remove the ejs dependency.
 
-### Folder Structure
+### What else do I need
 
-- client
-  - admin-app
-  - customer-app
-- server
+- Shopify Partner account
+- Shopify app and credentials
+- Create a .env file (see env.template)
+- ngrok or a similar tunneling software for development
 
-The client has multiple entry points. Added them just to demonstrate. If you don't need multiple entrypoints you can delete the app and remove the target from package.json to parcel won't complain when building.
-
-### Client App Hot Reload Tips
-
-Since we are using Parcel for this, [here is a link to a few tips.](https://parceljs.org/recipes/react/#tips)

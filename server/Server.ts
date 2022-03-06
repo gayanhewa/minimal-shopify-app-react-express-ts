@@ -1,4 +1,4 @@
-import {Express, Request, Response} from "express";
+import {Express, Request, Response, Router} from "express";
 
 export class Server {
 
@@ -6,16 +6,13 @@ export class Server {
 
     constructor(app: Express) {
         this.app = app;
-
-        this.app.get("/api/user", (req: Request, res: Response): void => {
-            res.json({
-                username: 'gayanhewa',
-            })
-        })
     }
 
     public start(port: number): void {
         this.app.listen(port, () => console.log(`Server listening on port ${port}!`));
     }
 
+    public registerRouter(prefix: string, router: Router): void {
+        this.app.use(prefix, router);
+    }
 }

@@ -5,7 +5,7 @@ export const App = (): JSX.Element => {
     return (
         <>
         <Header heading="Customer App Entry Point"/>
-        <div>Hello there Customer</div>
+        <div>Hello there Customer. Without shopify app bridge</div>
         </>
     )
 }
